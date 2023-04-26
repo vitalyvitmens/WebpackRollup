@@ -21,7 +21,7 @@ _/
 //! 4. rollup -c (что бы сбилдить наш проект выполняем данную команду)
 //! 5. npm install @rollup/plugin-babel --save-dev (В ТЕРМИНАЛЕ устанавливаем плагин babel для расширений css, картинок и тд он поддерживается старыми и современными браузерами. В файл package.json добавятся зависимости devDependencies так как мы установили флаг --save-dev так же devDependenciesне учитываются файлом bandle.js при сборке проекта, если мы не установили флаг --save-dev, то плагин установится в Dependencies - и будет учитываются при сборке проекта)
 //! 6. В файл rollup.config.mjs добавляем в начало: import { babel } from '@rollup/plugin-babel' и после output: plugins: [babel({ babelHelpers: 'bundled' })]
-//! 7. npm install @babel/core --save (В ТЕРМИНАЛЕ устанавливаем плагин что бы использовать стили, для расширений css, что бы подключить в файле rollup.config.mjs добавляем в начало: import styles from "rollup-plugin-styles" и в plugins: styles() - вызываем styles как функцию )
+//! 7. npm install -D rollup-plugin-styles (если будет ошибка выполни команду: npm install @babel/core --save) (В ТЕРМИНАЛЕ устанавливаем плагин что бы использовать стили, для расширений css, что бы подключить в файле rollup.config.mjs добавляем в начало: import styles from "rollup-plugin-styles" и в plugins: styles() - вызываем styles как функцию )
 //! 8. npm install -D rollup-plugin-img (В ТЕРМИНАЛЕ устанавливаем плагин что для картинок, что бы подключить в файле rollup.config.mjs добавляем в начало: import image from 'rollup-plugin-img' и в plugins: image({
       limit: 100000,
     }),
